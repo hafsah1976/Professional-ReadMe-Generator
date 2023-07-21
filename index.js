@@ -83,9 +83,9 @@ const questions = [
     'Apache License 2.0', 
     'MIT License',
     'The Unlicense',
-    'Boost Software License 1.0' ],
+    'Boost Software License 1.0'],
     name:"license",
-    message:"Please select a license for the project.",
+    message:"Please select a license for the project:",
 },
 
 ];
@@ -102,6 +102,13 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
+//The init() function is a function that is called 
+//when the user wants to initialize the application. 
+//The function first prompts the user to answer a series of questions, 
+//and then it uses the answers to create a data object. 
+//The data object is then written to a file called TheREADMEFile.md.
+//The null value is used to indicate that 
+//the data object should not be indented when it is serialized to JSON. This is done to make the output more readable.
 function init() {
     inquirer.prompt(questions).then((data)=>{
         console.log(JSON.stringify(data,null,""));
@@ -110,6 +117,5 @@ function init() {
 
     });
       }
-
 // Function call to initialize app
 init();

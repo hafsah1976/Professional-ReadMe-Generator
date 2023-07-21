@@ -3,28 +3,21 @@
 function renderLicenseBadge(license) {
 
   if (license === "GNU AGPLv3") {
-return "![License: AGPL v3](svg/License-AGPLv3-blue.svg)";
+    return "![AGPL v3 License](svg/License-AGPLv3-blue.svg)";
   } else if (license === "GNU GPLv3") {
-
-return "![License: GPL v3](svg/License-GPLv3-blue.svg)";
+    return "![GPL v3 License](./svg/License-GPLv3-blue.svg)";
   } else if (license === "GNU LGPLv3") {
-
-return "![License: LGPL v3](svg/License-LGPL20v3-blue.svg)";
+    return "![License: LGPL v3](./svg/License-LGPLv3-blue.svg)";
   } else if (license === "Mozilla Public License 2.0") {
-
-return "![Mozilla Public License 2.0](svg/License-MPL202.0-brightgreen.svg)";
+    return "![Mozilla Public License 2.0](./svg/License-MPL2.0-brightgreen.svg)";
   } else if (license === "MIT") {
-
-return "![License: MIT](svg/License-MIT-yellow.svg)]";
+    return "![License: MIT](./svg/License-MIT-yellow.svg)]";
   } else if (license === "Apache License 2.0") {
-
-return "![License:Apache License 2.0](svg/License-Apache202.0-blue.svg)";
+    return "![License:Apache License 2.0](./svg/License-Apache2.0-blue.svg)";
   } else if (license === "The Unlicense") {
-
-return "![License: Unlicense](svg/Unlicense_Blue_Badge.svg)";
+    return "![License: Unlicense](./svg/Unlicense_Blue_Badge.svg)";
   } else if (license === "Boost Software License 1.0") {
-
-return "![Boost License](svg/License-Boost201.0-lightblue.svg)";
+    return "![Boost License](./svg/License-Boost201.0-lightblue.svg)";
   } else {
     return `No License Selected`;
   }
@@ -37,30 +30,22 @@ return "![Boost License](svg/License-Boost201.0-lightblue.svg)";
 function renderLicenseLink(license) {
 
   if (license === "GNU AGPLv3") {
-
-return "[GNU AFFERO GENERAL PUBLIC LICENSE](https://choosealicense.com/licenses/agpl-3.0/)";
+    return "[GNU AFFERO GENERAL PUBLIC LICENSE](https://choosealicense.com/licenses/agpl-3.0/)";
   } else if (license === "GNU GPLv3") {
-
-return "[GNU GENERAL PUBLIC LICENSE](https://choosealicense.com/licenses/gpl-3.0/)";
+    return "[GNU GENERAL PUBLIC LICENSE](https://choosealicense.com/licenses/gpl-3.0/)";
   } else if (license === "GNU LGPLv3") {
-
-return "[GNU LESSER GENERAL PUBLIC LICENSE](https://choosealicense.com/licenses/lgpl-3.0/)";
+    return "[GNU LESSER GENERAL PUBLIC LICENSE](https://choosealicense.com/licenses/lgpl-3.0/)";
   } else if (license === "Mozilla Public License 2.0") {
-
-return "[Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)";
+    return "[Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)";
   } else if (license === "Apache License 2.0") {
-
-return "[Apache License](https://choosealicense.com/licenses/apache-2.0/)";
+    return "[Apache License](https://choosealicense.com/licenses/apache-2.0/)";
   } else if (license === "MIT") {
-
-return "[MIT License](https://choosealicense.com/licenses/mit/)";
+    return "[MIT License](https://choosealicense.com/licenses/mit/)";
 
   } else if (license === "The Unlicense") {
-
-return "[The Unlicense](https://choosealicense.com/licenses/unlicense/)";
+    return "[The Unlicense](https://choosealicense.com/licenses/unlicense/)";
   } else if (license === "Boost Software License 1.0") {
-
-return "[Boost Software License](https://choosealicense.com/licenses/bsl-1.0/)";
+    return "[Boost Software License](https://choosealicense.com/licenses/bsl-1.0/)";
   } else {
     return `No License Selected`;
   }
@@ -87,19 +72,19 @@ function generateMarkdown(data) {
   
   ${data.description}
 
-  ${data.license}
+  ${renderLicenseBadge(license)}
 
   ...
   
-  ## Table of Contents
+## Table of Contents
 
-  - [User Story](#userstory)
-  - [Acceptance Criteria](#acceptance)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Contributing](#contibuting)
-  - [Tests](#tests)
-  - [Questions](#questions)
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
   ...
 
   ## User Story
@@ -107,26 +92,26 @@ function generateMarkdown(data) {
   ${data.userstory}
   ...
 
-  ## Acceptance Criteria
+## Acceptance Criteria
 
   ${data.criteria}
   ...
 
-  ## Usage 
+## Usage 
 
     [Deployment URL](${data.deploy})
 
   ${data.usage}
   ...
 
-  ## Screenshot
+## Screenshot
 
   ${data.screenshot}
 
   ![]()
   ...
 
-  ## Installation
+## Installation
 
   The URL will mostly work in all browsers. 
   The preferred Browser is Google Chrome and the extension Chrome DevTools Extension to view the source code. 
@@ -136,7 +121,7 @@ function generateMarkdown(data) {
   ${data.install}
   ...
 
-  ## Contributing
+## Contributing
 
   Follow the steps below if you wish to contribute to this application:
 
@@ -148,7 +133,7 @@ function generateMarkdown(data) {
   - Your code will get reviewed and your branch will be merged.
   ...
 
-  ## Tests
+## Tests
 
   ${data.tests}
   ...
@@ -160,12 +145,11 @@ function generateMarkdown(data) {
   Thank you for reading till the end.
 
 
-
 ${renderLicenseSection(data.license)}
 
-${renderLicenseBadge(data.license)}
+  ${renderLicenseBadge(data.license)}
 
-${renderLicenseLink(data.license)}
+  ${renderLicenseLink(data.license)}
   
     `;
 };
