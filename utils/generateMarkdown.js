@@ -3,28 +3,28 @@
 function renderLicenseBadge(license) {
 
   if (license === "GNU AGPLv3") {
-return "![License: AGPL v3](svg/License-AGPL v3-blue.svg)";
+return "![License: AGPL v3](svg/License-AGPLv3-blue.svg)";
   } else if (license === "GNU GPLv3") {
 
 return "![License: GPL v3](svg/License-GPLv3-blue.svg)";
   } else if (license === "GNU LGPLv3") {
 
-return "![License: LGPL v3](svg/License-LGPL%20v3-blue.svg)";
+return "![License: LGPL v3](svg/License-LGPL20v3-blue.svg)";
   } else if (license === "Mozilla Public License 2.0") {
 
-return "![Mozilla Public License 2.0](svg/License-MPL%202.0-brightgreen.svg)";
+return "![Mozilla Public License 2.0](svg/License-MPL202.0-brightgreen.svg)";
   } else if (license === "MIT") {
 
 return "![License: MIT](svg/License-MIT-yellow.svg)]";
   } else if (license === "Apache License 2.0") {
 
-return "![License:Apache License 2.0](svg/License-Apache%202.0-blue.svg)";
+return "![License:Apache License 2.0](svg/License-Apache202.0-blue.svg)";
   } else if (license === "The Unlicense") {
 
 return "![License: Unlicense](svg/Unlicense_Blue_Badge.svg)";
   } else if (license === "Boost Software License 1.0") {
 
-return "![Boost License](svg/License-Boost%201.0-lightblue.svg)";
+return "![Boost License](svg/License-Boost201.0-lightblue.svg)";
   } else {
     return `No License Selected`;
   }
@@ -159,11 +159,9 @@ function generateMarkdown(data) {
 
   Thank you for reading till the end.
 
-  ...
+
 
 ${renderLicenseSection(data.license)}
-
-${data.license}
 
 ${renderLicenseBadge(data.license)}
 
