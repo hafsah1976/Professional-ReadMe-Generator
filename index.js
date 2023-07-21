@@ -47,7 +47,7 @@ const questions = [
 },
 
 {
-    type:"list",
+    type:"input",
     name:"tests",
     message:"Please enter the test cases for the project:- ",
 },
