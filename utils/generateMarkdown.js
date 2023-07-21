@@ -10,8 +10,8 @@ function renderLicenseBadge(license) {
     return "![License: LGPL v3](./svg/License-LGPLv3-blue.svg)";
   } else if (license === "Mozilla Public License 2.0") {
     return "![Mozilla Public License 2.0](./svg/License-MPL2.0-brightgreen.svg)";
-  } else if (license === "MIT") {
-    return "![License: MIT](./svg/License-MIT-yellow.svg)]";
+  } else if (license === "MIT License") {
+    return "![License: MIT](./svg/License-MIT-yellow.svg)";
   } else if (license === "Apache License 2.0") {
     return "![License:Apache License 2.0](./svg/License-Apache2.0-blue.svg)";
   } else if (license === "The Unlicense") {
@@ -39,14 +39,14 @@ function renderLicenseLink(license) {
     return "[Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)";
   } else if (license === "Apache License 2.0") {
     return "[Apache License](https://choosealicense.com/licenses/apache-2.0/)";
-  } else if (license === "MIT") {
+  } else if (license === "MIT License") {
     return "[MIT License](https://choosealicense.com/licenses/mit/)";
-
   } else if (license === "The Unlicense") {
     return "[The Unlicense](https://choosealicense.com/licenses/unlicense/)";
   } else if (license === "Boost Software License 1.0") {
     return "[Boost Software License](https://choosealicense.com/licenses/bsl-1.0/)";
   } else {
+    
     return `No License Selected`;
   }
 }
@@ -57,12 +57,10 @@ function renderLicenseSection(license) {
   if (!license) {
     return '';
   }
-
   return `
-  ## License
+## License
 
-  This project is licensed under the ${license} license.
-  `;
+This project is licensed under the ${license} license.`;
 }
 
 // TODO: Create a function to generate markdown for README
@@ -72,10 +70,6 @@ function generateMarkdown(data) {
   
   ${data.description}
 
-  ${renderLicenseBadge(license)}
-
-  ...
-  
 ## Table of Contents
 
 - [User Story](#user-story)
@@ -85,31 +79,24 @@ function generateMarkdown(data) {
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-  ...
 
-  ## User Story
+## User Story
 
   ${data.userstory}
-  ...
 
 ## Acceptance Criteria
 
   ${data.criteria}
-  ...
 
-## Usage 
+## Usage
 
     [Deployment URL](${data.deploy})
 
   ${data.usage}
-  ...
 
 ## Screenshot
 
   ${data.screenshot}
-
-  ![]()
-  ...
 
 ## Installation
 
@@ -123,14 +110,14 @@ function generateMarkdown(data) {
 
 ## Contributing
 
-  Follow the steps below if you wish to contribute to this application:
+Follow the steps below if you wish to contribute to this application:
 
-  - Fork the repository from github
-  - Create a new branch and switch to your branch using 'git checkout branchname'
-  - Commit your changes
-  - Push your branch using 'git push' to GitHub
-  - Create a new pull request
-  - Your code will get reviewed and your branch will be merged.
+- Fork the repository from github
+- Create a new branch and switch to your branch using 'git checkout branchname'
+- Commit your changes
+- Push your branch using 'git push' to GitHub
+- Create a new pull request
+- Your code will get reviewed and your branch will be merged.
   ...
 
 ## Tests
@@ -138,20 +125,18 @@ function generateMarkdown(data) {
   ${data.tests}
   ...
 
-  ## Questions
+## Questions
 
-  My name is ${data.username}. ${'\n'} If you have any questions about the repo, open an issue or contact me directly at ${data.emailID}. ${'\n'}You can find more of my work at ${data.github}
+My name is ${data.username}. ${'\n'} If you have any questions about the repo, open an issue or contact me directly at ${data.emailID}. ${'\n'}You can find more of my work at ${data.github}
 
-  Thank you for reading till the end.
+Thank you for reading till the end.
 
 
 ${renderLicenseSection(data.license)}
 
   ${renderLicenseBadge(data.license)}
 
-  ${renderLicenseLink(data.license)}
-  
-    `;
+  ${renderLicenseLink(data.license)}`;
 };
 
 module.exports = generateMarkdown;
