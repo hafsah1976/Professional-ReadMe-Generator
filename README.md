@@ -52,7 +52,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Walkthrough
 
-[Video Walkthrough of the project](https://drive.google.com/file/d/1v2NY56mO3qANGJ8R5GAMzwdh4Adl3rfL/view)
+![Video Walkthrough of the project](https://github.com/hafsah1976/Professional-ReadMe-Generator/assets/5677899/0ac27b86-66a0-413d-8657-72c54d0552cf)
 
 [The Readme.md generated using terminal](TheREADMEFile.md)
 
