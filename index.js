@@ -106,7 +106,7 @@ function init() {
     inquirer.prompt(questions).then((data)=>{
         console.log(JSON.stringify(data,null,""));
         // data.renderLicenseBadge=renderLicenseBadge(data.license);
-        writeToFile("sampleREADME.md",data);
+        writeToFile("TheREADMEFile.md",data);
 
     });
       }

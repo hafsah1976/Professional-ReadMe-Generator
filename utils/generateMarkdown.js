@@ -121,7 +121,7 @@ function generateMarkdown(data) {
 
   ## Screenshot
 
-  // '{data.screenshot}'
+  ${data.screenshot}
 
   ![]()
   ...
@@ -150,7 +150,7 @@ function generateMarkdown(data) {
 
   ## Tests
 
-  ${data.test}
+  ${data.tests}
   ...
 
   ## Questions
