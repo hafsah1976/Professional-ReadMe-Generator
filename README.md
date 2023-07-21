@@ -52,7 +52,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Walkthrough
 
-[Video Walkthrough of the project](https://app.screencastify.com/manage/videos/LlmCqC6ttxXGN2r6etfw)
+[Video Walkthrough of the project](https://drive.google.com/file/d/1v2NY56mO3qANGJ8R5GAMzwdh4Adl3rfL/view)
 
 [The Readme.md generated using terminal](TheREADMEFile.md)
 
